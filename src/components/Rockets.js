@@ -1,3 +1,5 @@
+import '../css/Rockets.css';
+
 const Rockets = () => (
   <></>
 );

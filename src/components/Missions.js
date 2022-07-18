@@ -1,3 +1,5 @@
+import '../css/Missions.css';
+
 const Missions = () => (
   <></>
 );

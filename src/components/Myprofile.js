@@ -1,3 +1,5 @@
+import '../css/Profile.css';
+
 const MyProfile = () => (
   <></>
 );
