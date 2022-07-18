@@ -10,14 +10,14 @@
 }
 
 .Flex-1 {
-    flex: 1 1 40%;
+  flex: 1 1 40%;
 }
 
 .logo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .logo img {
