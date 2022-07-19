@@ -9,16 +9,18 @@ const RocketsList = ({
 
   const handleReservation = ({ target }) => {
     const { type } = target.dataset;
-    console.log(id);
 
     dispatch(handleRocketReservation({ id, type }));
   };
 
   let button;
+  let reservedState;
   if (reserved) {
-    button = <button type="button" className="btn-leave" data-type="cancel" onClick={handleReservation}>Cancel Resrvation</button>;
+    button = <button type="button" className="btn-rocket btn-cancel" data-type="cancel" onClick={handleReservation}>Cancel Resrvation</button>;
+    reservedState = <span className="reserved-state">Reserved</span>;
   } else {
-    button = <button type="button" className="btn" data-type="reserve" onClick={handleReservation}>Reserve Rocket</button>;
+    button = <button type="button" className="btn-rocket btn-reserve" data-type="reserve" onClick={handleReservation}>Reserve Rocket</button>;
+    reservedState = <></>;
   }
   return (
 
@@ -33,7 +35,10 @@ const RocketsList = ({
 
           <div className="Rocket-Detail Rocket-Part2">
             <h2 className="name">{name}</h2>
-            <p className="description">{description}</p>
+            <p className="description">
+              {reservedState}
+              {description}
+            </p>
             {button}
           </div>
         </li>
