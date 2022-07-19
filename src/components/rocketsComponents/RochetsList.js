@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux';
+import RocketsDisplay from './RocketsDisplay';
 
 const RocketsList = () => {
   const { Rockets } = useSelector((state) => state.rockets);
@@ -6,25 +7,15 @@ const RocketsList = () => {
   return (
 
     <div>
-      <ul className="rocket-container">
-
-        {Rockets.map((Rocket) => (
-          <li key={Rocket.id} className="Rocket">
-            <img
-              className="Rocket-Part1"
-              src={Rocket.image}
-              alt="rocket"
-            />
-
-            <div className="Rocket-Detail Rocket-Part2">
-              <h2 className="name">{Rocket.name}</h2>
-              <p className="description">{Rocket.description}</p>
-
-            </div>
-          </li>
-
-        ))}
-      </ul>
+      {Rockets.map((Rocket) => (
+        <RocketsDisplay
+          key={Rocket.id}
+          image={Rocket.image}
+          name={Rocket.name}
+          description={Rocket.description}
+          reserved={Rocket.reserved}
+        />
+      ))}
     </div>
 
   );
