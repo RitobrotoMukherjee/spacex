@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { createAsyncThunk, createSlice, current } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
 const FETCH_BOOK_API = 'https://api.spacexdata.com/v3/missions';
 const INITIAL_STATE = { missionList: [], loading: true };
