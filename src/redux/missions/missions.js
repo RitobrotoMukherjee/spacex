@@ -1,11 +1,11 @@
 /* eslint-disable */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 
-const FETCH_BOOK_API = 'https://api.spacexdata.com/v3/missions';
+const FETCH_MISSION_API = 'https://api.spacexdata.com/v3/missions';
 const INITIAL_STATE = { missionList: [], loading: true };
 
 export const fetchMissions = createAsyncThunk('spacex/missions/FETCH_MISSIONS', async () => {
-  const response = await fetch(FETCH_BOOK_API);
+  const response = await fetch(FETCH_MISSION_API);
   return response.json();
 });
 
