@@ -16,7 +16,7 @@ const missionSlice = createSlice({
   extraReducers: {
     [fetchMissions.fulfilled]: (state, action) => {
       const res = action.payload.map(({mission_id, mission_name, description}) => {
-        return {mission_id, mission_name, description};
+        return { mission_id, mission_name, description, reserved: false };
       });
       state.loading = false;
       state.missionList = res;

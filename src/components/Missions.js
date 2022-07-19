@@ -2,6 +2,7 @@ import '../css/Missions.css';
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchMissions } from '../redux/missions/missions';
+import MissionTable from './Mission-components/MissionsTable';
 
 const Missions = () => {
   const dispatch = useDispatch();
@@ -9,18 +10,17 @@ const Missions = () => {
   const { loading, missionList } = useSelector((state) => state.missions);
 
   useEffect(() => {
-    dispatch(fetchMissions());
+    if (missionList.length === 0) {
+      dispatch(fetchMissions());
+    }
   }, [dispatch]);
 
-  if (loading) {
-    return (
-      <div><h1>Loading...</h1></div>
-    );
-  }
   return (
-    <div>
-      {missionList}
-    </div>
+    <section className="mission-container">
+      {loading
+        && (<h2 className="loading">Loading...</h2>)}
+      {!loading && (<MissionTable />)}
+    </section>
   );
 };
 
