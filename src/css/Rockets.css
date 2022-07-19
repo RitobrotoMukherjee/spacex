@@ -1,3 +1,23 @@
-* {
-  margin: 0;
+.Rocket {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.Rocket-Detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.Rocket-Part1 {
+  width: 30%;
+  padding: 0 2rem;
+}
+
+.Rocket-Part2 {
+  width: 70%;
+  padding: 0 2rem;
+}
+
+.name {
+  margin-bottom: 1rem;
 }
