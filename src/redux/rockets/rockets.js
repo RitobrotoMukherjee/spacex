@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import { toHaveDescription } from '@testing-library/jest-dom/dist/matchers';
 
 const rocketsAPI = 'https://api.spacexdata.com/v3/rockets';
 
