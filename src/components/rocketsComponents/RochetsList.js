@@ -6,7 +6,7 @@ const RocketsList = () => {
   return (
 
     <div>
-      <ul className="rocket-container">
+      <ul>
 
         {Rockets.map((Rocket) => (
           <li key={Rocket.id} className="Rocket">
