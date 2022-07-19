@@ -18,11 +18,8 @@ const Rockets = () => {
 
     <div>
       {loading && <div>Loading ...</div>}
-      {!loading && (
-        <div className="rocket-container">
-          <RocketsList />
-        </div>
-      )}
+      {!loading && (<RocketsList />)}
+
     </div>
   );
 };
