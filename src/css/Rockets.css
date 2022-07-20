@@ -1,0 +1,58 @@
+.Rocket {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.Rocket-Detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.Rocket-Part1 {
+  width: 30%;
+  padding: 0 2rem;
+}
+
+.Rocket-Part2 {
+  width: 70%;
+  padding: 0 2rem;
+}
+
+.name {
+  margin-bottom: 1rem;
+}
+
+.description {
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+}
+
+.rocket-container {
+  margin-top: 10rem;
+}
+
+.btn-rocket {
+  padding: 1rem;
+  width: 10rem;
+  border-color: black;
+  border-radius: 10%;
+}
+
+.btn-cancel {
+  background-color: white;
+  color: black;
+}
+
+.btn-reserve {
+  background-color: #295be4;
+  color: white;
+}
+
+.reserved-state {
+  color: white;
+  background-color: #1bad40;
+  padding: 0.3rem;
+  width: fit-content;
+  border-radius: 10%;
+  margin-right: 0.3rem;
+}

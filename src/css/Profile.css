@@ -1,0 +1,22 @@
+.profile-holder {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 120px;
+}
+
+.profile-table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  table-layout: auto;
+  width: 90%;
+}
+
+.Flex {
+  flex: 1 1 40%;
+}
+
+.profile-heading {
+  margin: 0 auto;
+  width: 90%;
+}
