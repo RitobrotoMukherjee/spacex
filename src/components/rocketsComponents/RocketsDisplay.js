@@ -28,7 +28,6 @@ const RocketsList = ({
             <h2 className="name">{name}</h2>
             <p className="description">
               {reserved && (<span className="reserved-state">Reserved</span>)}
-              {reserved && (<></>)}
               {description}
             </p>
             {reserved && (<button type="button" className="btn-rocket btn-cancel" data-type="cancel" onClick={handleReservation}>Cancel Resrvation</button>)}
