@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice, current } from '@reduxjs/toolkit';
 
 const rocketsAPI = 'https://api.spacexdata.com/v3/rockets';
 
@@ -17,6 +17,21 @@ export const fetchRockets = createAsyncThunk('rockets/getRockets', async () => {
 const rocketsSlice = createSlice({
   name: 'rockets',
   initialState: INITIAL_STATE,
+  reducers: {
+    handleRocketReservation: (state, action) => {
+      const { id, type } = action.payload;
+      const newReservetion = current(state).Rockets.map((rocket) => {
+        if(type === 'reserve' && id === rocket.id) {
+          return { ...rocket, reserved: true };
+        }
+        if(type === 'cancel' && id === rocket.id) {
+          return { ...rocket, reserved: false };
+        }
+        return rocket;
+      });
+      state.Rockets = newReservetion;
+    }
+  },
   extraReducers: {
     [fetchRockets.fulfilled]: (state, action) => {
 
@@ -25,6 +40,7 @@ const rocketsSlice = createSlice({
         name : item.rocket_name,
         description : item.description,
         image : item.flickr_images[0],
+        reserved: false,
       }));
 
       state.Rockets = rocketsArr;
@@ -40,5 +56,7 @@ const rocketsSlice = createSlice({
     },
   },
 });
+
+export const { handleRocketReservation } = rocketsSlice.actions;
 
 export default rocketsSlice.reducer;
