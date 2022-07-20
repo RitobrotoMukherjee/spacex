@@ -5,11 +5,15 @@ import { BrowserRouter } from 'react-router-dom';
 import store from '../redux/configureStore';
 import Rockets from '../components/Rockets';
 
-describe('Testing the Rockets', () => {
-  it('Rockets is rendered', () => {
-    const rockets = renderer
-      .create(<Provider store={store}><BrowserRouter><Rockets /></BrowserRouter></Provider>)
-      .toJSON();
-    expect(rockets).toMatchSnapshot();
-  });
+it('Rockets component snapshot testing', () => {
+  const rockets = renderer
+    .create(
+      <Provider store={store}>
+        <BrowserRouter>
+          <Rockets />
+        </BrowserRouter>
+      </Provider>,
+    )
+    .toJSON();
+  expect(rockets).toMatchSnapshot();
 });

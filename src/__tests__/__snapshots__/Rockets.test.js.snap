@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Testing the Rockets Rockets is rendered 1`] = `
+exports[`Rockets component snapshot testing 1`] = `
 <div>
   <div />
 </div>

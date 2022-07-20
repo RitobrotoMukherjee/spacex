@@ -5,11 +5,15 @@ import { BrowserRouter } from 'react-router-dom';
 import store from '../redux/configureStore';
 import Myprofile from '../components/Myprofile';
 
-describe('Testing the Myprofile', () => {
-  it('Myprofile is rendered', () => {
-    const myprofile = renderer
-      .create(<Provider store={store}><BrowserRouter><Myprofile /></BrowserRouter></Provider>)
-      .toJSON();
-    expect(myprofile).toMatchSnapshot();
-  });
+it('Myprofile component snapshot testing', () => {
+  const myprofile = renderer
+    .create(
+      <Provider store={store}>
+        <BrowserRouter>
+          <Myprofile />
+        </BrowserRouter>
+      </Provider>,
+    )
+    .toJSON();
+  expect(myprofile).toMatchSnapshot();
 });

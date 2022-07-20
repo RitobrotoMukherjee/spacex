@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Testing the Missions Missions is rendered 1`] = `
+exports[`Missions component snapshot testing 1`] = `
 <section
   className="mission-container"
 >

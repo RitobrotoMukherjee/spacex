@@ -5,11 +5,15 @@ import { BrowserRouter } from 'react-router-dom';
 import store from '../redux/configureStore';
 import Missions from '../components/Missions';
 
-describe('Testing the Missions', () => {
-  it('Missions is rendered', () => {
-    const missions = renderer
-      .create(<Provider store={store}><BrowserRouter><Missions /></BrowserRouter></Provider>)
-      .toJSON();
-    expect(missions).toMatchSnapshot();
-  });
+it('Missions component snapshot testing', () => {
+  const missions = renderer
+    .create(
+      <Provider store={store}>
+        <BrowserRouter>
+          <Missions />
+        </BrowserRouter>
+      </Provider>,
+    )
+    .toJSON();
+  expect(missions).toMatchSnapshot();
 });
