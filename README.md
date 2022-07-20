@@ -25,7 +25,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://spacex-api-microverse.herokuapp.com/my-profile)
+[Live Demo Link](https://spacex-api-microverse.herokuapp.com)
 
 
 ## Authors
