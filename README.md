@@ -4,6 +4,11 @@
 
 > In this project, we have worked with the real live data from the SpaceX API.We build a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
 
+## Screen shots
+
+- ![](./screen/screen1.PNG)
+- ![](./screen/screen2.PNG)
+- ![](./screen/screen3.PNG)
 
 ## Built With
 
@@ -20,7 +25,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://spacex-api-microverse.herokuapp.com/my-profile)
 
 
 ## Authors
