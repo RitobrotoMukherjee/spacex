@@ -17,7 +17,7 @@
 - ![](https://img.shields.io/badge/HTML-purple) 
 - ![](https://img.shields.io/badge/CSS-blue)
 - ![](https://img.shields.io/badge/WEBPACK-violet)
-- ![](https://img.shields.io/badge/Barbel-violet)
+- ![](https://img.shields.io/badge/Barbel-violet)   
 - ![](https://img.shields.io/badge/API-black)
 - ![](https://img.shields.io/badge/JSON-violet)
 - ![](https://img.shields.io/badge/REACT-blue)
@@ -82,9 +82,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- This project was based on the **SpaceX API** 
+- Microverse
 
 ## 📝 License
 
